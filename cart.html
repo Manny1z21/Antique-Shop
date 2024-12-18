@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, white, orange);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #8b4513;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #a0522d;
+            border-radius: 10px;
+        }
+        .cart {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .cart-icon {
+            font-size: 1.5em;
+            color: white;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .cart-count {
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+        .container {
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #a0522d;
+        }
+        .item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="cart" onclick="location.href='checkout.html';">
+            <i class="cart-icon">&#128722;</i>
+            <div class="cart-count" id="cart-count">0</div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Our Products</h1>
+        <div class="grid">
+            <div class="item">
+                <img src="beetle.jpeg" alt="1940's Volswagen Beetle">
+                <h2>1940's Volswagen Beetle</h2>
+                <p>$100,000,000</p>
+                <button class="button" onclick="addToCart('1940s Volswagen Beetle', '001', 100000000)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="camera.png" alt="World's First Camera">
+                <h2>World's First Camera</h2>
+                <p>$80,000,000</p>
+                <button class="button" onclick="addToCart('Worlds First Camera', '002', 80000000)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="clock.jpeg" alt="Grandfather Clock">
+                <h2>Grandfather Clock</h2>
+                <p>$60,000</p>
+                <button class="button" onclick="addToCart('Grandfather Clock', '003', 60000)">Add to Cart</ ```html
+button>
+            </div>
+            <div class="item">
+                <img src="boots.webp" alt="Ronaldo boots">
+                <h2>Ronaldo's Boots</h2>
+                <p>$100,000</p>
+                <button class="button" onclick="addToCart('Ronaldo boots', '004', 100000)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="iphone1.jpg" alt="iphone1">
+                <h2>Iphone 1</h2>
+                <p>$90,000</p>
+                <button class="button" onclick="addToCart('iphone1', '005', 90000)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="ps2.jpg" alt="PS2">
+                <h2>PlayStation 2</h2>
+                <p>$10,000</p>
+                <button class="button" onclick="addToCart('PlayStation 2', '006', 10000)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="mona lisa.avif" alt="Mona Lisa">
+                <h2>The Mona Lisa</h2>
+                <p>$300,000,000</p>
+                <button class="button" onclick="addToCart('Mona Lisa', '007', 300000000)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="banana.jpeg" alt="Banana Taped To Wall">
+                <h2>Banana Taped To Wall</h2>
+                <p>$7,500,000</p>
+                <button class="button" onclick="addToCart('Banana Taped To Wall', '008', 7500000)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="coins.jpg" alt="Ethiopian Coins">
+                <h2>Ethiopian Coins</h2>
+                <p>$500</p>
+                <button class="button" onclick="addToCart('Old Coins', '009', 500)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="chair.webp" alt="Antique Chair">
+                <h2>Antique Chair</h2>
+                <p>$50,000</p>
+                <button class="button" onclick="addToCart('Antique Chair', '010', 50000)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="tank.jpg" alt="World War I Tank">    
+                <h2>World War I Tank</h2>
+                <p>$10,000,000</p>
+                <button class="button" onclick="addToCart('World War I Tank', '011', 10000000)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="computer.jpg" alt="World's First Supercomputer">
+                <h2>World's First Supercomputer</h2>
+                <p>$150,000</p>
+                <button class="button" onclick="addToCart('Supercomputer', '012', 150000)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+ <script>
+   let cart = JSON.parse(localStorage.getItem('cart')) || [];    
+let totalPrice = 0;
+
+function updateCartCount() {
+    const cartCountElement = document.getElementById('cart-count');
+    if (cartCountElement) {
+        cartCountElement.textContent = cart.length > 0 ? cart.length : 0;
+    }
+}
+
+function addToCart(name, id, price) {
+    const item = { name, id, price };
+    cart.push(item);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    displayCart();
+}
+
+function displayCart() {
+    const cartItemsDiv = document.getElementById('cart-items');
+    if (cartItemsDiv) {
+        cartItemsDiv.innerHTML = ''; // Clear previous items
+        totalPrice = 0; // Reset total price
+
+        if (cart.length > 0) {
+            cart.forEach((item) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'cart-item';
+                itemDiv.innerHTML = `
+                    <div>
+                        <h3>${item.name}</h3>
+                        <p>ID: ${item.id}</p>
+                        <p>Price: $${item.price.toLocaleString()}</p>
+                    </div>
+                `;
+                cartItemsDiv.appendChild(itemDiv);
+                totalPrice += parseFloat(item.price);
+            });
+        } else {
+            cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+        }
+        document.getElementById('total-price').textContent = totalPrice.toFixed(2); // Update total price
+    }
+}
+
+window.onload = function() {
+    updateCartCount();
+    displayCart(); 
+};
+</script>
+
+</body>
+</html>

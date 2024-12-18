@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Antique Shop</title>
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, white, orange);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #8b4513;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #a0522d;
+            border-radius: 10px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+        }
+        .signup-form input {
+            width: 85%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .signup-form button {
+            padding: 10px 20px;
+            background-color: #8b4513;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .signup-form button:hover {
+            background-color: #a0522d;
+        }
+        .message {
+            display: flex;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="cart.html">Shop Now</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Create an Account</h1>
+        <form class="signup-form" onsubmit="registerUser(event)">
+            <input type="text" id="username" placeholder="Username" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+            <button type="submit">Sign Up</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>
